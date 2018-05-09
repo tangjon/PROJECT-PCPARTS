@@ -1,9 +1,13 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import TemplateView
 
 from .forms import SignUpForm
+
+
+class HomeView(TemplateView):
+    template_name = 'home.html'
 
 
 def home_view(request):
