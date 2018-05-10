@@ -4,9 +4,6 @@
 # Packaging files:
 *.egg*
 
-# Sphinx docs:
-build
-
 # SQLite3 database files:
 *.db
 *.sqlite3
