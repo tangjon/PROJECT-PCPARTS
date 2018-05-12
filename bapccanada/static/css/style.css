@@ -62,6 +62,18 @@ body {
     font-size: 13px;
 }
 
-.bapc-body-content .buildToolbarTop {
-    margin-top: 1rem;
+.bapc-body-content .buildToolbarTop .btn-toolbar {
+    justify-content: space-between;
+}
+
+.bapc-body-content .buildToolbarTop .btn-toolbar .form-control {
+    width: 280px;
+}
+
+.bapc-body-content .totalPriceSummaryPrefix {
+    text-align: right;
+}
+
+.bapc-body-content .shippingCost {
+    text-align: right;
 }

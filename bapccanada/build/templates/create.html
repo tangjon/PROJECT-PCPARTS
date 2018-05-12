@@ -4,76 +4,93 @@
 
 {% block bapc-body-content %}
     {# TOOLBAR #}
-    <div class="container buildToolbarTop">
-    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
-  </div>
-  <div class="input-group">
-    <div class="input-group-prepend">
-      <div class="input-group-text" id="btnGroupAddon">@</div>
-    </div>
-    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
-  </div>
-    </div>
+    <div class="container buildToolbarTop ">
+        <div class="btn-toolbar mb-3 mt-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text" id="btnGroupAddon">Permalink</div>
+                </div>
+                <input type="text" class="form-control" placeholder="https://buildapc.ca/list/thzH29"
+                       aria-label="Input group example" aria-describedby="btnGroupAddon">
+            </div>
+            <div class="mr-2" aria-label="Toolbar Controls">
+                <button type="button" class="btn btn-secondary">Save As</button>
+                <button type="button" class="btn btn-secondary">New Build</button>
+            </div>
+        </div>
     </div>
     {# END TOOLBAR #}
 
 
     {# COMPONENT LIST #}
     <div>
-    <table class="table table-striped">
-  <thead class="componentListTop">
-    <tr>
-        <th scope="col">Component</th>
-        <th scope="col"></th>
-        <th scope="col">Product Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">Shipping</th>
-        <th scope="col">Merchant</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <th scope="row">Video Card</th>
-        <td>Pic</td>
-        <td>Gigabyte - GeForce GTX 1050 Ti 4GB Windforce OC Video Card</td>
-        <td>$292.50	</td>
-        <td>FREE</td>
-        <td>Vuugo</td>
-        <td><button type="button" class="btn btn-primary btn-sm">Buy</button></td>
-        <td><button type="button" class="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button></td>
-    </tr>
-    <tr>
-        <th scope="row">CPU</th>
-        <td>Pic</td>
-        <td>Intel - Core i7-8700K 3.7GHz 6-Core Processor</td>
-        <td>$448.99</td>
-        <td>FREE</td>
-        <td>Mike's Computer Store</td>
-        <td><button type="button" class="btn btn-primary btn-sm">Buy</button></td>
-        <td><button type="button" class="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button></td>
-    </tr>
-    <tr>
-        <th scope="row">Monitor</th>
-        <td>Pic</td>
-        <td>Asus - PG279Q ROG Swift 27.0" 2560x1440 165Hz Monitor</td>
-        <td>$948.99</td>
-        <td>FREE</td>
-        <td>Amazon</td>
-        <td><button type="button" class="btn btn-primary btn-sm">Buy</button></td>
-        <td><button type="button" class="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button></td>
-    </tr>
-  </tbody>
-</table>
+        <table class="table table-striped">
+            <thead class="componentListTop">
+            <tr>
+                <th scope="col">Component</th>
+                <th scope="col"></th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Shipping</th>
+                <th scope="col">Merchant</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Video Card</th>
+                <td>Pic</td>
+                <td>Gigabyte - GeForce GTX 1050 Ti 4GB Windforce OC Video Card</td>
+                <td>$292.50</td>
+                <td class="shippingCost">FREE</td>
+                <td>Vuugo</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">Buy</button>
+                </td>
+                <td>
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">CPU</th>
+                <td>Pic</td>
+                <td>Intel - Core i7-8700K 3.7GHz 6-Core Processor</td>
+                <td>$448.99</td>
+                <td class="shippingCost">FREE</td>
+                <td>Mike's Computer Store</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">Buy</button>
+                </td>
+                <td>
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Monitor</th>
+                <td>Pic</td>
+                <td>Asus - PG279Q ROG Swift 27.0" 2560x1440 165Hz Monitor</td>
+                <td>$948.99</td>
+                <td class="shippingCost">FREE</td>
+                <td>Amazon</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">Buy</button>
+                </td>
+                <td>
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </td>
+            </tr>
+            <tr class="totalPriceSummaryRow">
+                <th class="totalPriceSummaryPrefix" colspan="5" scope="row">Total:</th>
+                <td>$1999.99</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     {# END COMPONENT LIST #}
 {% endblock %}
