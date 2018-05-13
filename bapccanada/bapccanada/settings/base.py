@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polymorphic',
+    'widget_tweaks',
     'home.apps.HomeConfig',
     'account.apps.AccountConfig',
     'build.apps.BuildConfig'
