@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
@@ -7,6 +8,7 @@ from django.views.generic import CreateView
 from account.forms import SignUpForm
 from account.models import UserProfile
 from django.contrib.auth import login as auth_login
+
 title = 'User Page'
 
 
@@ -32,6 +34,16 @@ def view_notifications(request):
 
 def view_security(request):
     return render(request, 'security.html', {'title': 'Preferences', 'slug': 'security'})
+
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            return redirect('home:home')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'title': 'Login', 'form': form})
 
 
 class UserCreate(CreateView):
