@@ -24,7 +24,7 @@ body {
     background-color: #f5f5f5;
 }
 
-.footer .footerContainer {
+.footer .footerContainer .row{
     justify-content: center;
 }
 

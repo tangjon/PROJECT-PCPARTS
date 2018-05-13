@@ -1,4 +1,8 @@
 {% load static %}
+{% url 'home:login' as login_url %}
+{% url 'account:profile' as profile_url %}
+{% url 'build:create' as build_url %}
+{% url 'products:gpu' as products_url %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -14,7 +18,7 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="{% url 'build:create' %}">Build</a>
-                <a class="nav-item nav-link" href="#">Parts</a>
+                <a class="nav-item nav-link" href="{% url 'products:gpu' %}">Parts</a>
             </div>
 
             {# TODO Login Configuration #}
