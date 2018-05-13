@@ -1,15 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 from polymorphic.models import PolymorphicModel
 
-
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.name
+from account.models import UserProfile
 
 
 class Component(PolymorphicModel):

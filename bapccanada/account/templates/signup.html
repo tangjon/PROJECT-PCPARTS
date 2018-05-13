@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
-
+{% load widget_tweaks %}
 {% block body %}
-    <div class="container">
-
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-sm-12">
                 <div class="card">
@@ -14,19 +13,33 @@
                                 <div class="form-group">
                                     {{ field.errors }}
                                     {{ field.label_tag }}
-                                    {{ field }}
+                                    {% render_field field class="form-control" %}
                                     {% if field.help_text %}
-                                        <small class="form-text text-muted">
+                                        <small class="form-text">
                                             {{ field.help_text|safe }}
                                         </small>
                                     {% endif %}
                                 </div>
                             {% endfor %}
                             <button type="submit" class="btn btn-primary">Create an account</button>
-                            <a class="btn btn-secondary" href="{% url 'home:home' %}">Already have an account?</a>
+                            <a class="btn btn-secondary" href="{% url 'account:sign_in' %}">Already have an account?</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    {# TODO Move to CSS #}
+    <style>
+        body {
+            background-color: #3b4f65
+        }
+
+        .card {
+            background-color: #e8e8e8;
+        }
+    </style>
+
+
 {% endblock %}
