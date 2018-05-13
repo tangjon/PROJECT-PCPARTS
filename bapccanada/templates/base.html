@@ -22,15 +22,18 @@
 
     <div class="bapc-header">
         <div class="container">
-            <div class="bapc-header-title">
-                {% block bapc-header-title %}
-                {% endblock bapc-header-title %}
-            </div>
-            <div class="bapc-header-content">
-                {% block bapc-header-content %}
-                {% endblock bapc-header-content %}
-            </div>
+            {% block bapc-header %}
+                <div class="bapc-header-title">
+                    <h2>{% block bapc-header-title %}
+                    {% endblock bapc-header-title %}</h2>
+                </div>
+                <div class="bapc-header-content">
+                    {% block bapc-header-content %}
+                    {% endblock bapc-header-content %}
+                </div>
+            {% endblock bapc-header %}
         </div>
+
     </div>
 
     <div class="bapc-body-content">
