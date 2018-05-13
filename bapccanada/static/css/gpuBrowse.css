@@ -1,0 +1,65 @@
+body .bapc-header {
+    background-color: #4E5EA6;
+}
+
+.bapc-body-content .browseLeftColumn {
+    border-right: 1px solid #e3e3e3;
+    min-height: 992px;
+    width: 250px;
+    padding: 26px 32px 32px 16px;
+}
+
+.bapc-body-content .browseRightColumn {
+    width: 890px;
+    padding: 26px 0px 32px 32px;
+}
+
+.browseSearchBar {
+    font-size: 12px;
+    float: right;
+    margin-top: -0.45rem;
+}
+
+.browseSearchBar input {
+    margin-left: 10px;
+    height: 30px;
+}
+
+.table-sorter-row th {
+    border-top-color: transparent;
+}
+
+h5 {
+    font-size: 22px;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.filterPanelTitle {
+    text-transform: uppercase;
+    color: #8d8f9e;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.filterPanel {
+    border-bottom: solid 1px #dedede;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.filterPanel li {
+    line-height: 1.5rem;
+}
+
+.filterPanel .filterPanelCheckbox {
+    vertical-align: middle;
+}

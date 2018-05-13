@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{% static 'css/style.less' |compile %}"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    {% block extraStyles %}
+    {% endblock extraStyles %}
 </head>
 
 <body>
@@ -35,6 +37,7 @@
         </div>
 
     </div>
+
 
     <div class="bapc-body-content">
         <div class="container">
