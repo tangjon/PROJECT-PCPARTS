@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -54,6 +55,13 @@ class UserCreate(CreateView):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # auth_login(request, user)
             return redirect('home:home')
         return redirect('account:sign_up')
+
+
+class SignIn(LoginView):
+    template_name = 'signin.html'
+
+
+class SignOut(LogoutView):
+    pass

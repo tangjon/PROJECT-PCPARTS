@@ -1,6 +1,6 @@
 from django.urls import re_path, path
 
-from account.views import UserCreate
+from account.views import UserCreate, SignIn
 from . import views
 
 # lets follow reddit url format
@@ -15,6 +15,6 @@ urlpatterns = [
     path('user/builds/', views.view_builds, name="builds"),
     path('user/notifications/', views.view_notifications, name="notifications"),
     path('user/security/', views.view_security, name="security"),
-    path('signup/', UserCreate.as_view(), name='sign_up'),
-    re_path(r'^login/$', views.login_view, name="sign_in"),
+    re_path(r'^signup/$', UserCreate.as_view(), name='sign_up'),
+    re_path(r'^login/$', SignIn.as_view(), name="sign_in"),
 ]

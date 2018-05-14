@@ -1,16 +1,44 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
-
-
-{% for field in form %}
-    <div class="form-group">
-        {{ field.errors }}
-        {{ field.label_tag }}
-        {% render_field field class="form-control" %}
-        {% if field.help_text %}
-            <small class="form-text">
-                {{ field.help_text|safe }}
-            </small>
-        {% endif %}
+{% block body %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Sign In</h3>
+                        <form method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="form-group">
+                                    {{ field.errors }}
+                                    {{ field.label_tag }}
+                                    {% render_field field class="form-control" %}
+                                    {% if field.help_text %}
+                                        <small class="form-text">
+                                            {{ field.help_text|safe }}
+                                        </small>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-{% endfor %}
+
+    {# TODO Move to CSS #}
+    <style>
+        body {
+            background-color: #3b4f65
+        }
+
+        .card {
+            background-color: #e8e8e8;
+        }
+    </style>
+
+
+{% endblock %}
