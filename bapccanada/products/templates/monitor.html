@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extraStyles %}
+   <link rel="stylesheet" type="text/css" href="{% static 'css/productDetails.css' %}"/>
+{% endblock extraStyles %}
+
+{% block bapc-header %}
+    <div class="productBrowseHeader container col">
+        <div class="productCategory pt-4">MONITOR</div>
+        <div class="productName">Asus - PG279Q ROG Swift 27.0" 2560x1440 165Hz Monitor</div>
+        <div class="productRating">
+            <div class="productStars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o checked"></span>
+                <span class="fa fa-star-o"></span>
+            </div>
+            <p><span class="productAggregates">( 4.5 Average / 45 Ratings )</span></p>
+        </div>
+    </div>{% endblock %}
