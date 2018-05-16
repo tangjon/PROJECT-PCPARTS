@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extraStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gpuBrowse.css' %}"/>
+
+{% endblock extraStyles %}
+
+{% block bapc-header-title %}{{ title }}{% endblock %}
+
+{% block bapc-body-content %}
+    <div class="row">
+        <div class="browseLeftColumn col">
+            <h5>Filters</h5>
+            <div class="filterPanel">
+                <div class="filterPanelTitle">MANUFACTURER</div>
+                <ul class="list-group filterPanelListGroup">
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Show All
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> ASUS
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Zotac
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> EVGA
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> GIGABYTE
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filterPanel">
+                <div class="filterPanelTitle">MANUFACTURER</div>
+                <ul class="list-group filterPanelListGroup">
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Show All
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> ASUS
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Zotac
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> EVGA
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> GIGABYTE
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filterPanel">
+                <div class="filterPanelTitle">MANUFACTURER</div>
+                <ul class="list-group filterPanelListGroup">
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Show All
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> ASUS
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Zotac
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> EVGA
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> GIGABYTE
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filterPanel">
+                <div class="filterPanelTitle">MANUFACTURER</div>
+                <ul class="list-group filterPanelListGroup">
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Show All
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> ASUS
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> Zotac
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> EVGA
+                    </li>
+                    <li><input class="filterPanelCheckbox" type="checkbox"
+                               aria-label="Checkbox for following text input"> GIGABYTE
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="browseRightColumn">
+            <div class="browseSearchBar form-inline">
+                Search Video Cards:
+                <input type="text" class="form-control" placeholder=""
+                       aria-label="search bar" id="partsBrowseSearchBar">
+            </div>
+            <h5>Parts</h5>
+            <div>
+                <table class="table table-sm mt-4">
+                    <thead>
+                    <tr class="table-sorter-row">
+                        <th scope="col"></th>
+                        <th scope="col">Video Card</th>
+                        <th scope="col">Chipset</th>
+                        <th scope="col">Memory</th>
+                        <th scope="col">Core Clock</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Price</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Add</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

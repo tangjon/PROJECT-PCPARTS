@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extraStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/productDetails.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owlcarousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owlcarousel/owl.theme.default.min.css' %}">
+{% endblock extraStyles %}
+
+{% block bapc-header %}
+    <div class="productBrowseHeader container col">
+        <div class="productCategory pt-4">MONITOR</div>
+        <div class="productName">Asus - PG279Q ROG Swift 27.0" 2560x1440 165Hz Monitor</div>
+        <div class="productRating">
+            <div class="productStars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o checked"></span>
+                <span class="fa fa-star-o"></span>
+            </div>
+            <p><span class="productAggregates">( 4.5 Average / 45 Ratings )</span></p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block carousel %}
+    <div class="owl-carousel owl-theme loop">
+   <div class="carouselItem"> <img src="{% static 'assets/1.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/2.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/3.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/4.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/5.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/6.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/7.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/8.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/9.jpg' %}"></div>
+       <div class="carouselItem"> <img src="{% static 'assets/10.jpg' %}"></div>
+    </div>
+{% endblock carousel %}
+
+{% block bapc-body-content %}
+
+{% endblock bapc-body-content %}
+
+{% block extraScripts %}
+    <script src="{% static 'js/owlcarousel/owl.carousel.min.js' %}"></script>
+{% endblock extraScripts %}
