@@ -3,7 +3,7 @@
 {% block body %}
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">{% block form_title %}{% endblock %}</h3>
@@ -21,6 +21,14 @@
                                     {% endif %}
                                 </div>
                             {% endfor %}
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </div>
                             {% block form_buttons %}
                             {% endblock %}
                         </form>
