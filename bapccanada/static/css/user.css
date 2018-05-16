@@ -1,0 +1,11 @@
+/* ACCOUNTS */
+.user-card {
+    margin: auto 0;
+    padding-left: 12px;
+}
+
+.bapc-header a.nav-link {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
