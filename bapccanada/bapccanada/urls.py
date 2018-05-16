@@ -19,7 +19,8 @@ app_name = 'app_name'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls', namespace='home')),
-    path('', include('account.urls', namespace='account')),
+    path('account/', include('account.urls', namespace='account')),
     path('build/', include('build.urls', namespace='build')),
-    path('products/', include('products.urls', namespace='products'))
+    path('products/', include('products.urls', namespace='products')),
+    path('user/', include('user.urls', namespace='user'))
 ]

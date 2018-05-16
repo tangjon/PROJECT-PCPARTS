@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, UsernameField
 
 from django.contrib.auth.models import User
 from django.contrib.auth.validators import ASCIIUsernameValidator
+from django.contrib.auth.views import LoginView
 from django.forms import ModelForm
 
 from account.models import UserProfile
@@ -23,14 +24,6 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'birth_date']
-
-    # def save(self, commit=True):
-    #     if not commit:
-    #         raise NotImplementedError("Can't create User and UserProfile without database save")
-    #     user = super(SignUpForm, self).save(commit=True)
-    #     user_profile = UserProfile(user=user, birth_date=self.cleaned_data['birth_date'])
-    #     user_profile.save()
-    #     return user, user_profile
 
     def save(self, commit=True):
         user = super(SignUpForm, self).save(commit=True)

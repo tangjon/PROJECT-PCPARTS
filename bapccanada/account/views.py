@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -10,30 +11,6 @@ from account.models import UserProfile
 from django.contrib.auth import login as auth_login
 
 title = 'User Page'
-
-
-def view_profile(request):
-    return render(request, 'profile.html', {'title': 'Profile', 'slug': 'user'})
-
-
-def view_preferences(request):
-    return render(request, 'preferences.html', {'title': 'Preferences', 'slug': 'preferences'})
-
-
-def view_comments(request):
-    return render(request, 'comments.html', {'title': 'Preferences', 'slug': 'comments'})
-
-
-def view_builds(request):
-    return render(request, 'builds.html', {'title': 'Preferences', 'slug': 'builds'})
-
-
-def view_notifications(request):
-    return render(request, 'notifications.html', {'title': 'Preferences', 'slug': 'notifications'})
-
-
-def view_security(request):
-    return render(request, 'security.html', {'title': 'Preferences', 'slug': 'security'})
 
 
 def login_view(request):
@@ -54,6 +31,14 @@ class UserCreate(CreateView):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # auth_login(request, user)
             return redirect('home:home')
         return redirect('account:sign_up')
+
+
+class SignIn(LoginView):
+    template_name = 'signin.html'
+    redirect_authenticated_user = True
+
+class Logout(LogoutView):
+    template_name = 'logout.html'
+    next_page = 'home:home'

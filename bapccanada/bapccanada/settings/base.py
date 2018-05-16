@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'home.apps.HomeConfig',
     'account.apps.AccountConfig',
+    'user.apps.UserConfig',
     'build.apps.BuildConfig',
     'products.apps.ProductsConfig'
 ]
@@ -135,3 +136,6 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 # END STATIC FILE CONFIGURATION
+
+
+LOGIN_REDIRECT_URL = 'home:home'
