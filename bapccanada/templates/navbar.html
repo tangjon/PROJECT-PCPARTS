@@ -20,15 +20,24 @@
             </div>
 
             {# TODO Login Configuration #}
-            <div class="navbar-account ml-auto">
-                <a class="btn btn-primary" href="{% url 'account:sign_in' %}">Sign In</a>
-                <a class="btn btn-danger" href="{% url 'account:sign_up' %}">Sign Up</a>
-                <button class="btn btn-secondary">Sign Out</button>
-                <a href="{% url 'user:profile' %}">@USER Settings</a>
+            <div class="navbar-account d-block ml-auto d-flex align-items-center">
                 {% if user.is_authenticated %}
-                    <p>i'm authenticated!</p>
+                    <h5>Welcome <a class="" href="{% url 'user:profile' %}">{{ user.username }}</a></h5>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle bg-transparent" data-toggle="dropdown"
+                                aria-haspopup="false"
+                                aria-expanded="false">
+                        </button>
+                        <div class="dropdown-menu bapc-dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'user:profile' %}"><i class="material-icons">account_circle</i>Profile</a>
+                            <a class="dropdown-item" href="{% url 'user:preferences' %}"><i class="material-icons">settings</i>Preferences</a>
+                            <a class="dropdown-item bg-danger text-light" href="{% url 'account:logout' %}"><i
+                                    class="material-icons">power_settings_new</i>Logout</a>
+                        </div>
+                    </div>
                 {% else %}
-                    <p>Please login to see this page.</p>
+                    <a class="btn btn-primary" href="{% url 'account:sign_in' %}">Sign In</a>
+                    <a class="btn btn-secondary ml-2" href="{% url 'account:sign_up' %}">Sign Up</a>
                 {% endif %}
             </div>
         </div>
@@ -36,3 +45,22 @@
     </div>
 
 </nav>
+
+<style>
+    .dropdown-toggle::after {
+    {#content: none;#}
+    }
+
+    .bg-transparent {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+    }
+
+    .bapc-dropdown-menu > a.dropdown-item {
+        display: flex;
+    }
+</style>
