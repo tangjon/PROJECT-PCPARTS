@@ -37,7 +37,7 @@ class UserCreate(CreateView):
 
 class SignIn(LoginView):
     template_name = 'signin.html'
-
+    redirect_authenticated_user = True
 
 class Logout(LogoutView):
     template_name = 'logout.html'
