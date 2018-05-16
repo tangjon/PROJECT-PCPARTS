@@ -8,7 +8,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title text-center">{% block form_title %}{% endblock %}</h3>
-                        <div class="text-center"><img class="" src="{% static 'assets/brand/bootstrap-logo.png' %}" style="width:80px"></div>
+                        <div class="text-center">
+                            <a href="{% url 'home:home' %}">
+                                <img src="{% static 'assets/brand/bootstrap-logo.png' %}" style="width:80px">
+                            </a>
+                        </div>
                         <form method="post">
                             {% csrf_token %}
                             {% for field in form %}
