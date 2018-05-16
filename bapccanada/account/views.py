@@ -13,30 +13,6 @@ from django.contrib.auth import login as auth_login
 title = 'User Page'
 
 
-def view_profile(request):
-    return render(request, 'profile.html', {'title': 'Profile', 'slug': 'user'})
-
-
-def view_preferences(request):
-    return render(request, 'preferences.html', {'title': 'Preferences', 'slug': 'preferences'})
-
-
-def view_comments(request):
-    return render(request, 'comments.html', {'title': 'Preferences', 'slug': 'comments'})
-
-
-def view_builds(request):
-    return render(request, 'builds.html', {'title': 'Preferences', 'slug': 'builds'})
-
-
-def view_notifications(request):
-    return render(request, 'notifications.html', {'title': 'Preferences', 'slug': 'notifications'})
-
-
-def view_security(request):
-    return render(request, 'security.html', {'title': 'Preferences', 'slug': 'security'})
-
-
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -63,5 +39,5 @@ class SignIn(LoginView):
     template_name = 'signin.html'
 
 
-class SignOut(LogoutView):
-    pass
+class Logout(LogoutView):
+    template_name = 'logout.html'

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'home.apps.HomeConfig',
     'account.apps.AccountConfig',
+    'user.apps.UserConfig',
     'build.apps.BuildConfig',
     'products.apps.ProductsConfig'
 ]

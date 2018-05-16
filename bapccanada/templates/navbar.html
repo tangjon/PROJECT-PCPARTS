@@ -1,8 +1,6 @@
 {% load static %}
-{% url 'home:login' as login_url %}
-{% url 'account:profile' as profile_url %}
-{% url 'build:create' as build_url %}
-{% url 'products:gpu' as products_url %}
+
+<!--suppress ALL -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -26,7 +24,12 @@
                 <a class="btn btn-primary" href="{% url 'account:sign_in' %}">Sign In</a>
                 <a class="btn btn-danger" href="{% url 'account:sign_up' %}">Sign Up</a>
                 <button class="btn btn-secondary">Sign Out</button>
-                <a href="{% url 'account:profile' %}">@USER Settings</a>
+                <a href="{% url 'user:profile' %}">@USER Settings</a>
+                {% if user.is_authenticated %}
+                    <p>i'm authenticated!</p>
+                {% else %}
+                    <p>Please login to see this page.</p>
+                {% endif %}
             </div>
         </div>
 
