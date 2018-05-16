@@ -37,3 +37,9 @@
     padding-bottom: 16px;
 }
 
+.carouselItem {
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+    cursor: pointer;
+}

@@ -38,7 +38,10 @@
         </div>
 
     </div>
-
+    <div class="carouselWrapper container">
+        {% block carousel %}
+        {% endblock carousel %}
+    </div>
 
     <div class="bapc-body-content">
         <div class="container">
@@ -52,7 +55,7 @@
 
 {% endblock body %}
 {# JAVASCRIPT #}
-<script type="text/javascript" src="{% static "js/scripts.js" %}"></script>
+
 {#<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>#}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -63,5 +66,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="{% static "js/onReady.js" %}"></script>
+
+{% block extraScripts %}
+
+{% endblock extraScripts %}
 </body>
 </html>
