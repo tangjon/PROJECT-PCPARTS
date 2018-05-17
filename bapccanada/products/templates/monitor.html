@@ -25,22 +25,98 @@
 
 {% block carousel %}
     <div class="owl-carousel owl-theme loop">
-   <div class="carouselItem"> <img src="{% static 'assets/1.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/2.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/3.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/4.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/5.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/6.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/7.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/8.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/9.jpg' %}"></div>
-       <div class="carouselItem"> <img src="{% static 'assets/10.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/1.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/2.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/3.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/4.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/5.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/6.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/7.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/8.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/9.jpg' %}"></div>
+        <div class="carouselItem"><img src="{% static 'assets/10.jpg' %}"></div>
     </div>
 {% endblock carousel %}
 
 {% block bapc-body-content %}
+    <div class="row">
+        <div class="detailLeftColumn col">
+            <div class="panelHeader">Technical Details</div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Manufacturer</div>
+                <div class="specEntryInfo">Asus</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Model</div>
+                <div class="specEntryInfo">PG279Q ROG Swift</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Screen Size</div>
+                <div class="specEntryInfo">27"</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Recommended Resolution</div>
+                <div class="specEntryInfo">2560 x 1440</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Widescreen</div>
+                <div class="specEntryInfo">Yes</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Aspect Ratio</div>
+                <div class="specEntryInfo">16:9</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Response Time</div>
+                <div class="specEntryInfo">4ms</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Refresh Rate</div>
+                <div class="specEntryInfo">Asus</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Supports G-sync</div>
+                <div class="specEntryInfo">Yes</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">Displayport</div>
+                <div class="specEntryInfo">1</div>
+            </div>
+            <div class="specEntry">
+                <div class="specEntryTitle">HDMI</div>
+                <div class="specEntryInfo">1</div>
+            </div>
+        </div>
 
-{% endblock bapc-body-content %}
+        <div class="detailRightColumn">
+            <button type="button" class="btn btn-primary btn-sm detailAddButton">Add to Build</button>
+            <div class="panelHeader">Prices</div>
+            <table class="table table-sm mt-4">
+                <thead class="componentListTop">
+                <tr>
+                    <th scope="col">Merchant</th>
+                    <th scope="col">Base</th>
+                    <th scope="col">Shipping</th>
+                    <th scope="col">Availability</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Amazon</th>
+                    <td>$979.50</td>
+                    <td>FREE</td>
+                    <td>In stock</td>
+                    <td>$979.50</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+{% endblock %}
 
 {% block extraScripts %}
     <script src="{% static 'js/owlcarousel/owl.carousel.min.js' %}"></script>

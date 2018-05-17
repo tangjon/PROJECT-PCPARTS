@@ -43,3 +43,54 @@
     overflow: hidden;
     cursor: pointer;
 }
+
+.carouselWrapper {
+    background-color: white;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.panelHeader {
+    font-size: 22px;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.bapc-body-content .detailLeftColumn {
+    border-right: 1px solid #e3e3e3;
+    min-height: 992px;
+    width: 300px;
+    padding: 16px 32px 32px 16px;
+}
+
+.bapc-body-content .detailRightColumn {
+    width: 840px;
+    padding: 16px 0 32px 32px;
+}
+
+.detailAddButton {
+    font-size: 12px;
+    float: right;
+    margin-left: 10px;
+    height: 30px;
+}
+
+.specEntryTitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8d8f9e;
+    font-weight: 400;
+    margin: 16px 0 4px 0;
+}
+
+.detailRightColumn .table thead th {
+    padding: 6px 6px 6px 16px;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 11px;
+    color: #252835;
+    font-weight: 400;
+    border-top: 0;
+}
+

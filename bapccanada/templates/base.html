@@ -38,16 +38,17 @@
         </div>
 
     </div>
-    <div class="carouselWrapper container">
-        {% block carousel %}
-        {% endblock carousel %}
-    </div>
-
-    <div class="bapc-body-content">
+    <div class="carouselWrapper">
         <div class="container">
-            {% block bapc-body-content %}
-            {% endblock bapc-body-content %}
+            {% block carousel %}
+            {% endblock carousel %}
         </div>
+    </div>
+    <div class="bapc-body-content">
+            <div class="container">
+                {% block bapc-body-content %}
+                {% endblock bapc-body-content %}
+            </div>
     </div>
 
 
