@@ -1,4 +1,4 @@
-/* ACCOUNTS */
+/* ACCOUNTS TAB */
 .user-card {
     margin: auto 0;
     padding-left: 12px;
@@ -9,3 +9,13 @@
     vertical-align: middle;
 }
 
+/* COMMENTS TAB */
+
+.flat-list {
+    display: flex;
+    margin-bottom: 0
+}
+
+ul.flat-list li {
+    flex: 1 1 auto;
+}
