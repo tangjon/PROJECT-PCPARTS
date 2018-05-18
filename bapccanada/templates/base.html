@@ -45,8 +45,12 @@
     </div>
 
     <div class="bapc-body-content">
-        {% block bapc-body-content %}
-        {% endblock bapc-body-content %}
+        {% block bapc-body-content-container %}
+            <div class="container">
+                {% block bapc-body-content %}
+                {% endblock bapc-body-content %}
+            </div>
+        {% endblock bapc-body-content-container %}
     </div>
 
 
