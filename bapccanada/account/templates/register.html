@@ -1,0 +1,8 @@
+{% extends 'form_isolated.html' %}
+
+{% block form_title %}Register{% endblock %}
+
+{% block form_buttons %}
+    <button type="submit" class="btn btn-primary">Register</button>
+    <a class="btn btn-secondary" href="{% url 'account:sign_in' %}">Already have an account?</a>
+{% endblock %}

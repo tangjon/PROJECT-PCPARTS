@@ -24,7 +24,7 @@ def login_view(request):
 
 
 class UserCreate(CreateView):
-    template_name = 'signup.html'
+    template_name = 'register.html'
     form_class = SignUpForm
 
     def post(self, request, *args, **kwargs):
@@ -36,9 +36,9 @@ class UserCreate(CreateView):
 
 
 class SignIn(LoginView):
-    template_name = 'signin.html'
+    template_name = 'login.html'
     redirect_authenticated_user = True
 
+
 class Logout(LogoutView):
-    template_name = 'logout.html'
     next_page = 'home:home'

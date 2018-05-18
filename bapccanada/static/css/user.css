@@ -1,0 +1,55 @@
+/* PROFILE TABS */
+
+#prof-tab a {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+/* ACCOUNTS TAB */
+.user-card {
+    margin: auto 0;
+    padding-left: 12px;
+}
+
+/* COMMENTS TAB */
+.flat-list {
+    display: flex;
+    margin-bottom: 0
+}
+
+ul.flat-list li {
+    flex: 1 1 auto;
+}
+
+/*PREFERENCES*/
+.tbl-pref th + th {
+    padding-left: 20px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+.tbl-pref th:first-of-type {
+    vertical-align: top;
+    text-align: right;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.tbl-pref tr {
+    margin-bottom: 5px;
+}
+
+.tbl-pref input {
+    margin: 2px .5em 0 0;
+}
+
+/* SECURITY */
+.round-field {
+    padding: 11px 11px;
+    background-color: #e6e6e6;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+

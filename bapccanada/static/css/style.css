@@ -1,13 +1,40 @@
-.bapc-header-content a {
-    color: white;
+/*
+
+GLOBAL CSS
+
+*/
+
+/*
+NAVIGATION BAR
+*/
+
+.bg-transparent {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
 
-/* GENERAL */
+.bapc-dropdown-menu > a.dropdown-item {
+    display: flex;
+}
+
+/*
+GENERAL CSS
+*/
 a:hover {
     color: #f73e44;
 }
 
-/* STICKER FOOTER */
+.bapc-header-content a {
+    color: white;
+}
+
+/*
+STICKER FOOTER
+*/
 html {
     position: relative;
     min-height: 100%;
@@ -42,25 +69,6 @@ body {
     padding-top: 30px;
 }
 
-/* ACCOUNTS */
-.user-card {
-    margin: auto 0;
-    padding-left: 12px;
-}
-
-.bapc-header a.nav-link {
-    display: inline-flex;
-    vertical-align: middle;
-}
-
-/* Login Form */
-.bapc-form-signin {
-    padding-top: 10%;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-}
-
 .componentListTop th {
     font-size: 13px;
 }
@@ -80,8 +88,6 @@ body {
 .bapc-body-content .shippingCost {
     text-align: right;
 }
-
-
 
 body {
     font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;

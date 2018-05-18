@@ -1,5 +1,44 @@
 {% extends 'profile.html' %}
 
-{% block bapc-body-content %}
-Preferences Page
+{% block bapc-body-content-container %}
+    <div class="container">
+        <table class="tbl-pref">
+            <tbody>
+
+            <tr>
+                <th>clicking options</th>
+                <th class="tbl-pref-options">
+                    <div>
+                        <input id="checkBox" type="checkbox">open links in a new window
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>email options</th>
+                <th class="tbl-pref-options">
+                    <div>
+                        <input id="checkBox" type="checkbox">send messages as emails
+                    </div>
+                    <div>
+                        <input id="checkBox" type="checkbox">send email digests
+                    </div>
+                    <div>
+                        <input id="checkBox" type="checkbox">unsubscribe from all emails
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>privacy</th>
+                <th class="tbl-pref-options">
+                    <div>
+                        <input id="checkBox" type="checkbox">allow my data to be used for research purposes
+                    </div>
+                    <div>
+                        <input id="checkBox" type="checkbox">don't allow search engines to index my user profile
+                    </div>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

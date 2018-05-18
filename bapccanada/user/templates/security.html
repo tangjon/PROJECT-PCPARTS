@@ -1,5 +1,34 @@
 {% extends 'profile.html' %}
 
-{% block bapc-body-content %}
-Security page
+{% block bapc-body-content-container %}
+
+    <div class="container py-3">
+
+        <h3>Change email</h3>
+        <div class="round-field">
+            <label style="font-weight: bold;">current password</label>
+            <input class="form-control" type="password" style="border: 2px solid #636363; ">
+        </div>
+        <div class="round-field">
+            <label style="font-weight: bold;">email</label>
+            <input class="form-control" type="password" style="border: 2px solid #636363; ">
+        </div>
+        <button class="btn btn-primary">save</button>
+
+        <h3>Change password</h3>
+        <div class="round-field">
+            <label style="font-weight: bold;">current password</label>
+            <input class="form-control" type="password" style="border: 2px solid #636363; ">
+        </div>
+        <div class="round-field">
+            <label style="font-weight: bold;">new password</label>
+            <input class="form-control" type="password" style="border: 2px solid #636363; ">
+        </div>
+        <div class="round-field">
+            <label style="font-weight: bold;">verify password</label>
+            <input class="form-control" type="password" style="border: 2px solid #636363; ">
+        </div>
+        <button class="btn btn-primary">save</button>
+    </div>
+
 {% endblock %}

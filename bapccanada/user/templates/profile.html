@@ -1,56 +1,101 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block extraStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}"/>
+{% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
 
 
 {% block bapc-header %}
-<div class="bapc-header-title">
-    <div class="row">
-        <img src="http://placehold.it/60x60" style="border-radius: 50%"/>
-        <div class="user-card">
-            {{ title }}
-            <div>@username</div>
+    <div class="bapc-header-title">
+        <div class="row">
+            <img src="http://placehold.it/60x60" style="border-radius: 50%"/>
+            <div class="user-card">
+                {{ title }}
+                <div>@username</div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="bapc-header-content">
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link {% if slug == 'user' %} active {% endif %}" href="{% url 'user:profile' %}"><i
-                    class="material-icons pr-1">account_circle</i>Profile</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if slug == 'preferences' %} active {% endif %}"
-               href="{% url 'user:preferences' %}"><i class="material-icons pr-1">settings</i>Preferences</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if slug == 'comments' %} active {% endif %}" href="{% url 'user:comments' %}"><i
-                    class="material-icons pr-1">comment</i>Comments</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if slug == 'builds' %} active {% endif %}" href="{% url 'user:builds' %}"><i
-                    class="material-icons pr-1">build</i>Builds</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if slug == 'notifications' %} active {% endif %}"
-               href="{% url 'user:notifications' %}"><i
-                    class="material-icons pr-1">priority_high</i>Notifications</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if slug == 'security' %} active {% endif %}" href="{% url 'user:security' %}"><i
-                    class="material-icons pr-1">security</i>Security</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-    </ul>
-</div>
+    <div id="prof-tab" class="bapc-header-content">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'user' %} active {% endif %}" href="{% url 'user:profile' %}"><i
+                        class="material-icons pr-1">account_circle</i><span>Profile</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'preferences' %} active {% endif %}"
+                   href="{% url 'user:preferences' %}"><i
+                        class="material-icons pr-1">settings</i><span>Preferences</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'comments' %} active {% endif %}" href="{% url 'user:comments' %}"><i
+                        class="material-icons pr-1">comment</i><span>Comments</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'saved' %} active {% endif %}" href="{% url 'user:saved' %}"><i
+                        class="material-icons pr-1">save</i><span>Saved Parts</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'builds' %} active {% endif %}" href="{% url 'user:builds' %}"><i
+                        class="material-icons pr-1">build</i><span>Builds</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'notifications' %} active {% endif %}"
+                   href="{% url 'user:notifications' %}"><i
+                        class="material-icons pr-1">priority_high</i><span>Notifications</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if slug == 'security' %} active {% endif %}" href="{% url 'user:security' %}"><i
+                        class="material-icons pr-1">security</i><span>Security</span></a>
+            </li>
+
+        </ul>
+    </div>
 
 {% endblock bapc-header %}
 
-{% block bapc-body-content %}
-    Default profile page
-{% endblock %}
+{% block bapc-body-content-container %}
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="mt-2">Account</h2>
+                <h5>COMMENT KARMA</h5>
+                <a href="#">0</a>
+                <h5>COMMENTS</h5>
+                <a href="#">0</a>
+                <h5>POSTS</h5>
+                <a href="#">0</a>
+                <h5>BUILD GUIDES</h5>
+                <a href="#">0</a>
+                <h5>COMPLETED BUILDS</h5>
+                <a href="#">0</a>
+                <h5>JOINED</h5>
+                <a href="#">0</a>
+            </div>
+            <div class="col">
+                <h2 class="mt-2">Profile Settings</h2>
+                <form>
+                    <h4>Biography</h4>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Save</button>
+                </form>
+                <h4>Avatar</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Upload a image</label>
+                        <input type="file" class="form-control">
+                        <small id="emailHelp" class="form-text text-muted">Recommended Size 10x10
+                        </small>
+                    </div>
+                    <button class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 

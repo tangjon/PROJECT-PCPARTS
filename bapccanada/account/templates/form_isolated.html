@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load widget_tweaks %}
 {% block body %}
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title">You logged out</h3>
+                        <h3 class="card-title text-center">{% block form_title %}{% endblock %}</h3>
+                        <div class="text-center">
+                            <a href="{% url 'home:home' %}">
+                                <img src="{% static 'assets/brand/bootstrap-logo.png' %}" style="width:80px">
+                            </a>
+                        </div>
                         <form method="post">
                             {% csrf_token %}
                             {% for field in form %}
@@ -21,8 +27,9 @@
                                     {% endif %}
                                 </div>
                             {% endfor %}
-                            <button type="submit" class="btn btn-primary">Create an account</button>
-                            <a class="btn btn-secondary" href="{% url 'account:sign_in' %}">Already have an account?</a>
+
+                            {% block form_buttons %}
+                            {% endblock %}
                         </form>
                     </div>
                 </div>
