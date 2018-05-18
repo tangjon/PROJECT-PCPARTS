@@ -18,35 +18,37 @@
         </div>
     </div>
 
-    <div class="bapc-header-content">
+    <div id="prof-tab" class="bapc-header-content">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'user' %} active {% endif %}" href="{% url 'user:profile' %}"><i
-                        class="material-icons pr-1">account_circle</i>Profile</a>
+                        class="material-icons pr-1">account_circle</i><span>Profile</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'preferences' %} active {% endif %}"
-                   href="{% url 'user:preferences' %}"><i class="material-icons pr-1">settings</i>Preferences</a>
+                   href="{% url 'user:preferences' %}"><i
+                        class="material-icons pr-1">settings</i><span>Preferences</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'comments' %} active {% endif %}" href="{% url 'user:comments' %}"><i
-                        class="material-icons pr-1">comment</i>Comments</a>
+                        class="material-icons pr-1">comment</i><span>Comments</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'saved' %} active {% endif %}" href="{% url 'user:saved' %}"><i
-                        class="material-icons pr-1">save</i>Saved Parts</a>
+                        class="material-icons pr-1">save</i><span>Saved Parts</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'builds' %} active {% endif %}" href="{% url 'user:builds' %}"><i
-                        class="material-icons pr-1">build</i>Builds</a>
+                        class="material-icons pr-1">build</i><span>Builds</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% if slug == 'notifications' %} active {% endif %}" href="{% url 'user:notifications' %}"><i
-                        class="material-icons pr-1">priority_high</i>Notifications</a>
+                <a class="nav-link {% if slug == 'notifications' %} active {% endif %}"
+                   href="{% url 'user:notifications' %}"><i
+                        class="material-icons pr-1">priority_high</i><span>Notifications</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'security' %} active {% endif %}" href="{% url 'user:security' %}"><i
-                        class="material-icons pr-1">security</i>Security</a>
+                        class="material-icons pr-1">security</i><span>Security</span></a>
             </li>
 
         </ul>

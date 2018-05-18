@@ -1,32 +1,5 @@
 {% extends 'profile.html' %}
 
-{% block extraStyles %}
-    <style>
-        .tbl-pref th + th {
-            padding-left: 20px;
-            font-weight: normal;
-            padding-bottom: 10px;
-            padding-top: 10px;
-
-        }
-
-        .tbl-pref th:first-of-type {
-            vertical-align: top;
-            text-align: right;
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-
-        .tbl-pref tr {
-            margin-bottom: 5px;
-        }
-
-        .tbl-pref input {
-            margin: 2px .5em 0 0;
-        }
-    </style>
-{% endblock %}
-
 {% block bapc-body-content-container %}
     <div class="container">
         <table class="tbl-pref">
