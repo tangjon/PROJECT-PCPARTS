@@ -1,9 +1,9 @@
 /* Project specific Javascript goes here. */
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        dots: false,
+        dotsEach: 5,
         center: true,
-        items: 2,
+        items: 7,
         loop: true,
         margin: 10,
         responsive: {
