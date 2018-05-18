@@ -63,3 +63,8 @@ ul {
 .filterPanel .filterPanelCheckbox {
     vertical-align: middle;
 }
+
+.productStars span {
+    color: orange;
+    font-size: 11px;
+}
