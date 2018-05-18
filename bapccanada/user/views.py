@@ -23,3 +23,7 @@ def view_notifications(request):
 
 def view_security(request):
     return render(request, 'security.html', {'title': 'Preferences', 'slug': 'security'})
+
+
+def view_saved(request):
+    return render(request, 'saved.html', {'title': 'Preferences', 'slug': 'saved'})

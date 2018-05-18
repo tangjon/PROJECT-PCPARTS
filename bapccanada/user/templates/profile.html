@@ -33,6 +33,10 @@
                         class="material-icons pr-1">comment</i>Comments</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {% if slug == 'saved' %} active {% endif %}" href="{% url 'user:saved' %}"><i
+                        class="material-icons pr-1">save</i>Saved Parts</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {% if slug == 'builds' %} active {% endif %}" href="{% url 'user:builds' %}"><i
                         class="material-icons pr-1">build</i>Builds</a>
             </li>
@@ -41,10 +45,12 @@
                    href="{% url 'user:notifications' %}"><i
                         class="material-icons pr-1">priority_high</i>Notifications</a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link {% if slug == 'security' %} active {% endif %}" href="{% url 'user:security' %}"><i
                         class="material-icons pr-1">security</i>Security</a>
             </li>
+
         </ul>
     </div>
 

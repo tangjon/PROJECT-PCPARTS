@@ -15,5 +15,6 @@ urlpatterns = [
     path('builds/', views.view_builds, name="builds"),
     path('notifications/', views.view_notifications, name="notifications"),
     path('security/', views.view_security, name="security"),
+    path('saved/', views.view_saved, name="saved")
 
 ]
