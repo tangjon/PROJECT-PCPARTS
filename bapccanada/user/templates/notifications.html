@@ -1,5 +1,40 @@
 {% extends 'profile.html' %}
 
 {% block bapc-body-content %}
-Notifications page
+    <div class="container">
+        <div class="mt-3">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <div class="font-weight-bold" style="display: flex;">
+                        <a href="#">What to do when faced with a hit run?</a>
+                        <div class="ml-2">by <a href="#">USER123</a></div>
+                    </div>
+                    <a href="#">{{ user.username }}</a>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+
+                    <ul class="flat-list list-inline text-center d-flex">
+                        <li>remove</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <div class="font-weight-bold" style="display: flex;">
+                        <a href="#">What to do when faced with a hit run?</a>
+                        <div class="ml-2">by <a href="#">USER123</a></div>
+                    </div>
+                    <a href="#">{{ user.username }}</a>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+
+                    <ul class="flat-list list-inline text-center d-flex">
+                        <li>remove</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
