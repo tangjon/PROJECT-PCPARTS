@@ -1,5 +1,84 @@
 {% extends 'profile.html' %}
 
-{% block bapc-body-content %}
-builds html
+{% block bapc-body-content-container %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2 class="mt-2">Part List</h2>
+                <ul class="list-group">
+                    <li class="list-group-item active">Build #1</li>
+                    <li class="list-group-item">Build #2</li>
+                    <li class="list-group-item">Build #3</li>
+                </ul>
+            </div>
+            <div class="col-lg-8">
+                <table class="table table-striped">
+                    <thead class="componentListTop">
+                    <tr>
+                        <th scope="col">Component</th>
+                        <th scope="col"></th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Price</th>
+                           <th scope="col"></th>
+                           <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Video Card</th>
+                        <td>Pic</td>
+                        <td>Gigabyte - GeForce GTX 1050 Ti 4GB Windforce OC Video Card</td>
+                        <td>$292.50</td>
+                        <td class="shippingCost">FREE</td>
+                        <td>Vuugo</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Buy</button>
+                        </td>
+                        <td>
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">×</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CPU</th>
+                        <td>Pic</td>
+                        <td>Intel - Core i7-8700K 3.7GHz 6-Core Processor</td>
+                        <td>$448.99</td>
+                        <td class="shippingCost">FREE</td>
+                        <td>Mike's Computer Store</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Buy</button>
+                        </td>
+                        <td>
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">×</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Monitor</th>
+                        <td>Pic</td>
+                        <td><a href="/products/gpu/monitor">Asus - PG279Q ROG Swift 27.0" 2560x1440 165Hz Monitor</a>
+                        </td>
+                        <td>$948.99</td>
+                        <td class="shippingCost">FREE</td>
+                        <td>Amazon</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Buy</button>
+                        </td>
+                        <td>
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">×</span></button>
+                        </td>
+                    </tr>
+                    <tr class="totalPriceSummaryRow">
+                        <th class="totalPriceSummaryPrefix" colspan="5" scope="row">Total:</th>
+                        <td>$1999.99</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock %}
