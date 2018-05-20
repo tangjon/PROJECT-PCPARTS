@@ -2,10 +2,11 @@ body .bapc-header {
     background-color: #4E5EA6;
 }
 
+
 .bapc-body-content .browseLeftColumn {
     border-right: 1px solid #e3e3e3;
     min-height: 992px;
-    width: 250px;
+    max-width: 250px;
     padding: 26px 32px 32px 16px;
 }
 

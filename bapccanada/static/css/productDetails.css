@@ -9,7 +9,7 @@
     max-width: 1200px;
 }
 
-.productStars span {
+.bapc-header .productStars span {
     color: orange;
     font-size: 32px;
 }
@@ -60,7 +60,7 @@
 .bapc-body-content .detailLeftColumn {
     border-right: 1px solid #e3e3e3;
     min-height: 992px;
-    width: 300px;
+    max-width: 300px;
     padding: 16px 32px 32px 16px;
 }
 

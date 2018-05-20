@@ -1,0 +1,48 @@
+.reviewWrapper {
+    margin-bottom: 20px;
+}
+
+.reviewWrapper .reviewUserPicture {
+    display: table-cell;
+    vertical-align: top;
+    width: 48px;
+}
+
+.reviewWrapper .reviewUserPicture img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.reviewWrapper .reviewContent {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 12px;
+    padding-top: 14px;
+}
+
+.reviewContent .reviewInformation {
+    color: #8d8f9e;
+    font-size: 0.75em;
+}
+
+.reviewContent .reviewInformation .reviewInformationEntry:not(:first-child) {
+    margin-left: 8px;
+    padding-left: 9px;
+    border-left: solid 1px #e3e3e3;
+}
+
+.reviewRating .productStars span {
+    color: orange;
+    font-size: 11px;
+}
+
+.reviewRating {
+    margin-top: -0.5rem;
+}
+
+.reviewMessage {
+    font-size: 13px;
+    font-weight: 400;
+}
