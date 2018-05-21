@@ -65,3 +65,14 @@
     transform: translateY(-50%);
 }
 
+.bapc-body-content .componentListTable .productPrice,
+.bapc-body-content .componentListTable .productShopLink {
+    text-decoration: none;
+    color: #2c85c5;
+}
+
+.bapc-body-content .componentListTable .productPrice:hover,
+.bapc-body-content .componentListTable .productShopLink:hover {
+    color: #103148;
+}
+
