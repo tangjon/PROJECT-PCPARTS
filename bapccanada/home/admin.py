@@ -1,5 +1,6 @@
 from django.contrib import admin
-from home.models import GPU, Review, Build
+from products.models import GPU, Review
+from build.models import Build
 
 # Register your models here.
 admin.site.register(GPU)
