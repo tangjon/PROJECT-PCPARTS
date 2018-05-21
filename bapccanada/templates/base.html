@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-{#{% load compile_static %}#}
 <html>
 <head>
     <title>{{ title }} - BAPCCanada</title>
@@ -10,9 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.less' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.less' |compile %}"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% block extraStyles %}
     {% endblock extraStyles %}
 </head>
