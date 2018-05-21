@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+
+
+
 {% block extraStyles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}"/>
 {% endblock %}
@@ -13,47 +16,50 @@
             <img src="http://placehold.it/60x60" style="border-radius: 50%"/>
             <div class="user-card">
                 {{ title }}
-                <div>@username</div>
+                <div>{{ user.username }}</div>
             </div>
         </div>
     </div>
 
+    {% url 'user:profile' user.username as url_profile %}
+    {% url 'user:preferences' user.username as url_preferences %}
+    {% url 'user:comments' user.username as url_comments %}
+    {% url 'user:saved' user.username as url_saved %}
+    {% url 'user:builds' user.username as url_builds %}
+    {% url 'user:security' user.username as url_security %}
+
     <div id="prof-tab" class="bapc-header-content">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link {% if slug == 'user' %} active {% endif %}" href="{% url 'user:profile' %}"><i
+                <a class="nav-link {% if request.path == url_profile %} active {% endif %}" href={{ url_profile }}><i
                         class="material-icons pr-1">account_circle</i><span>Profile</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% if slug == 'preferences' %} active {% endif %}"
-                   href="{% url 'user:preferences' %}"><i
+                <a class="nav-link {% if request.path == url_preferences %} active {% endif %}"
+                   href={{ url_preferences }}><i
                         class="material-icons pr-1">settings</i><span>Preferences</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% if slug == 'comments' %} active {% endif %}" href="{% url 'user:comments' %}"><i
+                <a class="nav-link {% if request.path == url_comments %} active {% endif %}"
+                   href={{ url_comments }}><i
                         class="material-icons pr-1">comment</i><span>Comments</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {% if slug == 'saved' %} active {% endif %}" href="{% url 'user:saved' %}"><i
+               <li class="nav-item">
+                <a class="nav-link {% if request.path == url_saved %} active {% endif %}"
+                   href={{ url_saved }}><i
                         class="material-icons pr-1">save</i><span>Saved Parts</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {% if slug == 'builds' %} active {% endif %}" href="{% url 'user:builds' %}"><i
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == url_builds %} active {% endif %}"
+                   href={{ url_builds }}><i
                         class="material-icons pr-1">build</i><span>Builds</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if slug == 'notifications' %} active {% endif %}"
-                   href="{% url 'user:notifications' %}"><i
-                        class="material-icons pr-1">priority_high</i><span>Notifications</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if slug == 'security' %} active {% endif %}" href="{% url 'user:security' %}"><i
+            </li>      <li class="nav-item">
+                <a class="nav-link {% if request.path == url_security %} active {% endif %}"
+                   href={{ url_security }}><i
                         class="material-icons pr-1">security</i><span>Security</span></a>
             </li>
-
         </ul>
     </div>
-
 {% endblock bapc-header %}
 
 {% block bapc-body-content-container %}
@@ -98,4 +104,3 @@
         </div>
     </div>
 {% endblock %}
-

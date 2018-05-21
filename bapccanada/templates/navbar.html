@@ -21,16 +21,18 @@
             {# TODO Login Configuration #}
             <div class="navbar-account d-block ml-auto d-flex align-items-center">
                 {% if user.is_authenticated %}
-                    <h5>Welcome <a class="" href="{% url 'user:profile' %}">{{ user.username }}</a></h5>
+                    <h5>Welcome <a class="" href="{% url 'user:profile' user.username %}">{{ user.username }}</a></h5>
                     <div class="dropdown">
                         <button class="dropdown-toggle bg-transparent" data-toggle="dropdown"
                                 aria-haspopup="false"
                                 aria-expanded="false">
                         </button>
                         <div class="dropdown-menu bapc-dropdown-menu">
-                            <a class="dropdown-item" href="{% url 'user:profile' %}"><i class="material-icons">account_circle</i>Profile</a>
-                            <a class="dropdown-item" href="{% url 'user:preferences' %}"><i class="material-icons">settings</i>Preferences</a>
-                            <a class="dropdown-item bg-danger text-light" href="{% url 'account:logout' %}"><i
+                            <a class="dropdown-item" href="{% url 'user:profile' user.username %}"><i
+                                    class="material-icons">account_circle</i>Profile</a>
+                            <a class="dropdown-item" href="{% url 'user:preferences' user.username %}"><i
+                                    class="material-icons">settings</i>Preferences</a>
+                            <a class="dropdown-item bg-danger text-light" href="{% url 'account:logout'  %}"><i
                                     class="material-icons">power_settings_new</i>Logout</a>
                         </div>
                     </div>
