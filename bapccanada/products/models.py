@@ -3,6 +3,9 @@ from django.template.defaultfilters import slugify
 
 from polymorphic.models import PolymorphicModel
 
+from home.models import Price, Image
+from account.models import UserProfile
+
 
 class Component(PolymorphicModel):
     manufacturer = models.CharField(max_length=30)
@@ -18,12 +21,27 @@ class Component(PolymorphicModel):
     last_updated = models.DateTimeField(auto_now=True)
     slug = models.SlugField(blank=True)
 
+    images = models.ManyToManyField(Image)
+    prices = models.ManyToManyField(Price)
+
     def __str__(self):
         return "{} - {}".format(self.manufacturer, self.model_number)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.model_number)
         super(Component, self).save(*args, **kwargs)
+
+
+class Review(models.Model):
+    user = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True)
+    component = models.ForeignKey(Component, on_delete=models.CASCADE)
+    content = models.CharField(max_length=1000)
+    stars = models.PositiveIntegerField(default=0)
+    time_added = models.DateTimeField(auto_now=True)
+    time_edited = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "{} - {}".format(self.user, self.id)
 
 
 class GPU(Component):
