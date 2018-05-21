@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block extraStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/build.css' %}"/>
+{% endblock extraStyles %}
 
 {% block bapc-header-title %}{{ title }}{% endblock %}
 
@@ -24,7 +28,7 @@
 
     {# COMPONENT LIST #}
     <div>
-        <table class="table table-striped">
+        <table class="table table-striped componentListTable">
             <thead class="componentListTop">
             <tr>
                 <th scope="col">Component</th>
@@ -37,11 +41,15 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="componentListBody">
             <tr>
-                <th scope="row">Video Card</th>
-                <td>Pic</td>
-                <td>Gigabyte - GeForce GTX 1050 Ti 4GB Windforce OC Video Card</td>
+                <th scope="row"><a class="browseCategory" href="{% url 'products:gpu' %}">Video Card</a></th>
+                <td class="productImage">
+                    <div class="imageWrapper">
+                        <img src="{% static 'assets/gpu.jpg' %}">
+                    </div>
+                </td>
+                <td><a class="productTitle">Gigabyte - GeForce GTX 1050 Ti 4GB Windforce OC Video Card</a></td>
                 <td>$292.50</td>
                 <td class="shippingCost">FREE</td>
                 <td>Vuugo</td>
@@ -54,9 +62,13 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">CPU</th>
-                <td>Pic</td>
-                <td>Intel - Core i7-8700K 3.7GHz 6-Core Processor</td>
+                <th scope="row"><a class="browseCategory" href="{% url 'products:cpu' %}">CPU</a></th>
+                <td class="productImage">
+                    <div class="imageWrapper">
+                        <img src="{% static 'assets/i7.jpg' %}">
+                    </div>
+                </td>
+                <td><a class="productTitle">Intel - Core i7-8700K 3.7GHz 6-Core Processor</a></td>
                 <td>$448.99</td>
                 <td class="shippingCost">FREE</td>
                 <td>Mike's Computer Store</td>
@@ -69,9 +81,15 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Monitor</th>
-                <td>Pic</td>
-                <td><a href="{% url 'products:monitor' %}">Asus - PG279Q ROG Swift 27.0" 2560x1440 165Hz Monitor</a></td>
+                <th scope="row"><a class="browseCategory" href="{% url 'products:monitors' %}">Monitor</a></th>
+                <td class="productImage">
+                    <div class="imageWrapper">
+                        <img src="{% static 'assets/monitor.jpg' %}">
+                    </div>
+                </td>
+                <td><a class="productTitle" href="{% url 'products:monitor' %}">Asus - PG279Q ROG Swift 27.0" 2560x1440
+                    165Hz Monitor</a>
+                </td>
                 <td>$948.99</td>
                 <td class="shippingCost">FREE</td>
                 <td>Amazon</td>

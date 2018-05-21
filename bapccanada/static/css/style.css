@@ -69,26 +69,6 @@ body {
     padding-top: 30px;
 }
 
-.componentListTop th {
-    font-size: 13px;
-}
-
-.bapc-body-content .buildToolbarTop .btn-toolbar {
-    justify-content: space-between;
-}
-
-.bapc-body-content .buildToolbarTop .btn-toolbar .form-control {
-    width: 280px;
-}
-
-.bapc-body-content .totalPriceSummaryPrefix {
-    text-align: right;
-}
-
-.bapc-body-content .shippingCost {
-    text-align: right;
-}
-
 body {
     font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;

@@ -1,0 +1,67 @@
+.componentListTop th {
+    font-size: 13px;
+}
+
+.bapc-body-content .buildToolbarTop .btn-toolbar {
+    justify-content: space-between;
+}
+
+.bapc-body-content .buildToolbarTop .btn-toolbar .form-control {
+    width: 280px;
+}
+
+.bapc-body-content .totalPriceSummaryPrefix {
+    text-align: right;
+}
+
+.bapc-body-content .shippingCost {
+    text-align: right;
+}
+
+.bapc-body-content .componentListBody .productTitle {
+    color: #252835;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.bapc-body-content .componentListBody .productTitle:hover {
+    color: #2c85c5;
+}
+
+.bapc-body-content .componentListTable td,
+.bapc-body-content .componentListTable th {
+    vertical-align: middle;
+}
+
+.bapc-body-content .componentListTable .componentListBody .browseCategory {
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2c85c5;
+}
+
+.bapc-body-content .componentListTable .componentListBody .browseCategory:hover {
+    color: #103148;
+}
+
+.bapc-body-content .componentListTable .productImage {
+    padding: 8px;
+}
+
+.bapc-body-content .componentListTable .productImage .imageWrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 4px;
+    background: white;
+    border: 1px solid #D4D4D4;
+}
+
+.bapc-body-content .componentListTable .productImage .imageWrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
