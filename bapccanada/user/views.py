@@ -2,58 +2,52 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from django.urls import reverse
 from django.views.generic import TemplateView
 
 
-class ProfileView(TemplateView):
+class BaseProfileView(TemplateView):
+    title_name = None
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = self.title_name
+        return context
+
+    def dispatch(self, request, *args, **kwargs):
+        # Todo WA: reverse by template name
+        if request.path != reverse('user:' + self.template_name.split('.html')[0], kwargs={
+            'username': request.user.username
+        }):
+            return redirect('home:home')
+        return super(BaseProfileView, self).dispatch(request, *args, **kwargs)
+
+
+class ProfileView(BaseProfileView):
     template_name = 'profile.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Profile'
-        return context
+    title_name = 'Profile'
 
 
-class PreferencesView(TemplateView):
+class PreferencesView(BaseProfileView):
     template_name = 'preferences.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Preferences'
-        return context
+    title_name = 'Preferences'
 
 
-class CommentsView(TemplateView):
+class CommentsView(BaseProfileView):
     template_name = 'comments.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Comments'
-        return context
+    title_name = 'Comments'
 
 
-class BuildsView(TemplateView):
+class BuildsView(BaseProfileView):
     template_name = 'builds.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Builds'
-        return context
+    title_name = 'Builds'
 
 
-class SecurityView(TemplateView):
+class SecurityView(BaseProfileView):
     template_name = 'security.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Security'
-        return context
+    title_name = 'Security'
 
 
-class SavedView(TemplateView):
+class SavedView(BaseProfileView):
     template_name = 'saved.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Saved Parts'
-        return context
+    title_name = 'Saved Parts'
