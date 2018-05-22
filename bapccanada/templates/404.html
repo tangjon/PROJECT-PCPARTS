@@ -1,9 +1,6 @@
-{% templatetag openblock %} extends "base.html" {% templatetag closeblock %}
+{% extends 'base.html'%}
+{% block body %}
 
-{% templatetag openblock %} block title {% templatetag closeblock %}Page Not found{% templatetag openblock %} endblock {% templatetag closeblock %}
-
-{% templatetag openblock %} block page_title {% templatetag closeblock %}Page Not found{% templatetag openblock %} endblock page_title {% templatetag closeblock %}
-
-{% templatetag openblock %} block content {% templatetag closeblock %}
-<p>This is not the page you were looking for.</p>
-{% templatetag openblock %} endblock content {% templatetag closeblock %}
+    <h1>404</h1>
+    <h6>Ooops, Something Goes Wrong</h6>
+{% endblock %}
