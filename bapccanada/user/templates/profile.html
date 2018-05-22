@@ -16,17 +16,19 @@
             <img src="http://placehold.it/60x60" style="border-radius: 50%"/>
             <div class="user-card">
                 {{ title }}
-                <div>{{ user.username }}</div>
+                <div>
+                    {{ username }}
+                </div>
             </div>
         </div>
     </div>
 
-    {% url 'user:profile' user.username as url_profile %}
-    {% url 'user:preferences' user.username as url_preferences %}
-    {% url 'user:comments' user.username as url_comments %}
-    {% url 'user:saved' user.username as url_saved %}
-    {% url 'user:builds' user.username as url_builds %}
-    {% url 'user:security' user.username as url_security %}
+    {% url 'user:profile' username as url_profile %}
+    {% url 'user:preferences' username as url_preferences %}
+    {% url 'user:comments' username as url_comments %}
+    {% url 'user:saved' username as url_saved %}
+    {% url 'user:builds' username as url_builds %}
+    {% url 'user:security' username as url_security %}
 
     <div id="prof-tab" class="bapc-header-content">
         <ul class="nav nav-tabs">
@@ -34,29 +36,32 @@
                 <a class="nav-link {% if request.path == url_profile %} active {% endif %}" href={{ url_profile }}><i
                         class="material-icons pr-1">account_circle</i><span>Profile</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {% if request.path == url_preferences %} active {% endif %}"
-                   href={{ url_preferences }}><i
-                        class="material-icons pr-1">settings</i><span>Preferences</span></a>
-            </li>
+            {% if browse_user.username == user.username %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == url_preferences %} active {% endif %}"
+                       href={{ url_preferences }}><i
+                            class="material-icons pr-1">settings</i><span>Preferences</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == url_security %} active {% endif %}"
+                       href={{ url_security }}><i
+                            class="material-icons pr-1">security</i><span>Security</span></a>
+                </li>
+            {% endif %}
             <li class="nav-item">
                 <a class="nav-link {% if request.path == url_comments %} active {% endif %}"
                    href={{ url_comments }}><i
                         class="material-icons pr-1">comment</i><span>Comments</span></a>
             </li>
-               <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link {% if request.path == url_saved %} active {% endif %}"
                    href={{ url_saved }}><i
                         class="material-icons pr-1">save</i><span>Saved Parts</span></a>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link {% if request.path == url_builds %} active {% endif %}"
                    href={{ url_builds }}><i
                         class="material-icons pr-1">build</i><span>Builds</span></a>
-            </li>      <li class="nav-item">
-                <a class="nav-link {% if request.path == url_security %} active {% endif %}"
-                   href={{ url_security }}><i
-                        class="material-icons pr-1">security</i><span>Security</span></a>
             </li>
         </ul>
     </div>
@@ -83,23 +88,35 @@
             </div>
             <div class="col">
                 <h2 class="mt-2">Profile Settings</h2>
-                <form>
-                    <h4>Biography</h4>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-                    </div>
-                    <button class="btn btn-primary">Save</button>
-                </form>
-                <h4>Avatar</h4>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Upload a image</label>
-                        <input type="file" class="form-control">
-                        <small id="emailHelp" class="form-text text-muted">Recommended Size 10x10
-                        </small>
-                    </div>
-                    <button class="btn btn-primary">Upload</button>
-                </form>
+
+                <h4>Biography</h4>
+                {% if browse_user.username != user.username %}
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen book. It has survived not only five
+                        centuries, but also the leap into electronic typesetting, remaining essentially
+                        unchanged.</p>
+                {% else %}
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                        <button class="btn btn-primary">Save</button>
+                    </form>
+                {% endif %}
+                {% if browse_user.username == user.username %}
+                    <h4>Avatar</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Upload a image</label>
+                            <input type="file" class="form-control">
+                            <small id="emailHelp" class="form-text text-muted">Recommended Size 10x10
+                            </small>
+                        </div>
+                        <button class="btn btn-primary">Upload</button>
+                    </form>
+                {% endif %}
+
             </div>
         </div>
     </div>
